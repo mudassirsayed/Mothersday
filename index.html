@@ -1,176 +1,57 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="wrapper">
-    <button><a class="cta" data-text="Open the link for a surprise" data-link="./md.html">Share</a> 
-        </button>
-    </div>
-<style>
-    /*---------------Menu CTA Button---------------*/
-
-    .wrapper{
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    button{
-        cursor: pointer;
-    }
-        
-             .cta{
-                 border: 2px solid #ffffff4f!important;
-                 padding: 12px!important;
-                 border-radius: 25px;
-                 text-align: center;
-                 width: 300px; 
-                 display:block;
-                 margin:22% auto 0% auto;
-                }
-              
-             .cta:hover{
-                 background-color: #8dc63f;
-                 color: white!important;
-             }
-              
-</style>
-<script>
- 
-  let isMobile = {
-  Android: function() {
-  return navigator.userAgent.match(/Android/i);
-  },
-  iOS: function() {
-  return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Windows: function() {
-  return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function() {
-  return (isMobile.Android() || isMobile.iOS() || isMobile.Windows());
-  }
-  };
-  const a = document.querySelector('.cta')
-    .addEventListener('click', () => {
-   if( isMobile.any() ) {
-  let text = $(this).attr("data-text");
-  let url = $(this).attr("data-link");
-  let message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
-  let whatsapp_url = "whatsapp://send?text=" + message;
-  window.location.href = whatsapp_url;
-  } else {
-  alert("Please share this article in mobile device");
-  }
-  });
-  
-
-</script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-    <title>Document</title>
-    <a data-text="Your message goes here.." data-link="https://mudassirsayed.github.io/Mothersday/" class="whatsapp w3_whatsapp_btn w3_whatsapp_btn_large">Happy Mothers Day!! Share</a>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <title>Document</title>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+    <div class="wrapper">
+        <div>
+            <h1>Happy Mother's Day</h1>
+        </div>
+        <div>
+            <a data-text="Your message goes here.." data-link="https://mudassirsayed.github.io/Mothersday/"
+                class="whatsapp w3_whatsapp_btn w3_whatsapp_btn_large">Share</a>
+        </div>
+    </div>
 </head>
-<style>
-    .w3_whatsapp_btn {
-background-image: url('icon.png');
-border: 1px solid rgba(0, 0, 0, 0.1);
-display: inline-block !important;
-position: relative;
-font-family: Arial,sans-serif;
-letter-spacing: .4px;
-cursor: pointer;
-font-weight: 400;
-text-transform: none;
-color: #fff;
-border-radius: 2px;
-background-color: #5cbe4a;
-background-repeat: no-repeat;
-line-height: 1.2;
-text-decoration: none;
-text-align: left;
-}
-.w3_whatsapp_btn_small {
-font-size: 12px;
-background-size: 16px;
-background-position: 5px 2px;
-padding: 3px 6px 3px 25px;
-}
-
-.w3_whatsapp_btn_medium {
-font-size: 16px;
-background-size: 20px;
-background-position: 4px 2px;
-padding: 4px 6px 4px 30px;
-}
-
-.w3_whatsapp_btn_large {
-font-size: 16px;
-background-size: 20px;
-background-position: 5px 5px;
-padding: 8px 6px 8px 30px;
-color: #fff;
-}
-a.whatsapp { color: #fff;}
-</style>
 <body>
-    
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
-  
 
- 
- 
-  var isMobile = {
-  Android: function() {
-  return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function() {
-  return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function() {
-  return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function() {
-  return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function() {
-  return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function() {
-  return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-  }
-  };
-  $(document).on("click", '.whatsapp', function() {
-  if( isMobile.any() ) {
-  var text = $(this).attr("data-text");
-  var url = $(this).attr("data-link");
-  var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
-  var whatsapp_url = "whatsapp://send?text=" + message;
-  window.location.href = whatsapp_url;
-  } else {
-  alert("Please share this article in mobile device");
-  }
-  });
-  });
-</script>
+   <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+    <script>
+        $(document).ready(function () {
+            //     var isMobile = {
+            //     Android: function () {
+            //         return navigator.userAgent.match(/Android/i);
+            //     },
+            //     iOS: function () {
+            //         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            //     },
+            //     Windows: function () {
+            //         return navigator.userAgent.match(/IEMobile/i);
+            //     },
+            //     any: function () {
+            //         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            //     }
+            // };
+            
+            $(document).on("click", '.whatsapp', function () {
+                if(/Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    var text = $(this).attr("data-text");
+                    var url = $(this).attr("data-link");
+                    var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+                    var whatsapp_url = "whatsapp://send?text=" + message;
+                    window.location.href = whatsapp_url;
+                } else {
+                    alert("Please share this article in mobile device");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
