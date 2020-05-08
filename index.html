@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <a class="cta" data-text="Open the link for a surprise" data-link="./md.html">Share</a> 
+</div>
+<style>
+    /*---------------Menu CTA Button---------------*/
+
+    .wrapper{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+        
+             .cta{
+                 border: 2px solid #ffffff4f!important;
+                 padding: 12px!important;
+                 border-radius: 25px;
+                 text-align: center;
+                 width: 300px; 
+                 display:block;
+                 margin:22% auto 0% auto;
+                }
+              
+             .cta:hover{
+                 background-color: #8dc63f;
+                 color: white!important;
+             }
+              
+</style>
+<script>
+ 
+  let isMobile = {
+  Android: function() {
+  return navigator.userAgent.match(/Android/i);
+  },
+  iOS: function() {
+  return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Windows: function() {
+  return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function() {
+  return (isMobile.Android() || isMobile.iOS() || isMobile.Windows());
+  }
+  };
+  const a = document.querySelector('.cta')
+    .addEventListener('click', () => {
+   if( isMobile.any() ) {
+  let text = $(this).attr("data-text");
+  let url = $(this).attr("data-link");
+  let message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+  let whatsapp_url = "whatsapp://send?text=" + message;
+  window.location.href = whatsapp_url;
+  } else {
+  alert("Please share this article in mobile device");
+  }
+  });
+  
+
+</script>
+</body>
+</html>
